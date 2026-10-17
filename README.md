@@ -1,4 +1,5 @@
 # Éditeur de Graphes — C# / Windows Forms
+*Note : Ce projet a été initialement développé hors de GitHub (instance GitLab interne ou développement local) puis importé ici pour archivage, d'où l'absence d'historique de commits.*
 
 Application desktop en C# et Windows Forms permettant de dessiner, manipuler et éditer des graphes directement à la souris (création et déplacement de sommets, tracé d'arêtes, personnalisation visuelle). L'éditeur intègre un système complet d'historique (**Undo / Redo**) ainsi que la gestion du zoom sur le canevas.
 
