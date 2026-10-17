@@ -1,32 +1,32 @@
-# Éditeur de graphes - dessin, édition et undo/redo
+# Éditeur de Graphes — C# / Windows Forms
 
-Application **C# / WinForms** qui permet de dessiner un graphe à la souris : création des nœuds, dessin des arrêtes, déplacement des noeuds, suppression.  
-Chaque action peut-être annulée ou rétablie (undo-redo).
+Application desktop en C# et Windows Forms permettant de dessiner, manipuler et éditer des graphes directement à la souris (création et déplacement de sommets, tracé d'arêtes, personnalisation visuelle). L'éditeur intègre un système complet d'historique (**Undo / Redo**) ainsi que la gestion du zoom sur le canevas.
 
-**Auteurs :** Rafaël HOCQUEL
-**Version :** 1.0
+## Fonctionnalités principales
 
-## Ce que fait le programme
+- **Édition interactive au curseur :** Création de nœuds à la volée, liaison par simple clic ou par glisser-déposer (*drag & drop*), et création automatique d'un sommet relié lorsqu'on relâche une arête dans le vide.
+- **Personnalisation visuelle :** Réglage de la couleur (`color`) et de l'épaisseur du contour (boutons `-` / `+`, de 1 à 10) pour les futurs nœuds, ou modification individuelle d'un nœud existant (texte, couleur, épaisseur).
+- **Historique d'actions (Undo / Redo) :** Annulation et rétablissement jusqu'aux 50 dernières opérations via le menu *Edit*.
+- **Navigation sur le canevas :** Zoom fluide à la molette et déplacement via les barres de défilement horizontale et verticale.
 
-| # | Fonction | Geste |
-|---|----------|-------|
-| 1 | Créer un nœud | Clic gauche dans une zone vide |
-| 2 | Relier deux nœuds | Clic sur un nœud, puis clic sur un autre (ou glisser jusqu'à ce dernier) |
-| 3 | Créer un nœud au passage | Partir d'un nœud et relâcher dans le vide : le nœud est créé et relié |
-| 4 | Déplacer un nœud | Bouton **Move Mode**, puis glisser (le nœud devient rouge pendant le déplacement) |
-| 5 | Modifier un nœud | Clic droit → **Change** : couleur, épaisseur du trait, texte |
-| 6 | Supprimer un nœud | Clic droit → **Delete** |
-| 7 | Régler les prochains nœuds | Boutons **−** / **+** pour l'épaisseur (de 1 à 10) et **color** pour la couleur |
-| 8 | Zoom et défilement | **Ctrl + molette** pour le zoom, barres de défilement horizontale et verticale |
-| 9 | Annuler / rétablir | **Undo** et **Redo** dans le menu *Edit* (50 dernières actions) |
-| 10 | Tout effacer | Bouton **Erase all graph** |
+## Contrôles et raccourcis
 
-## Prérequis
+| Action | Manipulation |
+| :--- | :--- |
+| **Créer un nœud** | Clic gauche dans une zone vide du canevas |
+| **Relier deux nœuds** | Clic sur un nœud source puis sur un nœud cible (ou glisser de l'un à l'autre) |
+| **Créer et relier à la volée** | Tirer un trait depuis un nœud existant et relâcher le clic dans une zone vide |
+| **Déplacer un nœud** | Activer le bouton **Move Mode**, puis glisser le nœud (il passe en rouge pendant le déplacement) |
+| **Modifier un nœud** | Clic droit sur le nœud → **Change** (étiquette, couleur, épaisseur du trait) |
+| **Supprimer un nœud** | Clic droit sur le nœud → **Delete** |
+| **Zoomer / Dézoomer** | `Ctrl` + Molette de la souris |
+| **Annuler / Rétablir** | Menu **Edit** → **Undo** / **Redo** |
+| **Réinitialiser le canevas** | Bouton **Erase all graph** |
 
-- **Windows 10 / 11**
-- **.NET 8 SDK** ou **Visual Studio 2022**
+## Prérequis et lancement
 
-## Installation
+- **OS :** Windows 10 / 11
+- **Environnement :** .NET 8 SDK ou Visual Studio 2022
 
 ```bash
 git clone https://github.com/rafael-hocquel/PU-editeur-graphes.git
